@@ -1,0 +1,61 @@
+/* USF SmartStudy Spaces - Custom Styles */
+/* Extends Tailwind CSS with project-specific styles */
+
+/* Base Styles */
+body {
+    scroll-behavior: smooth;
+}
+
+/* Map Container Styles */
+#map-container {
+    transition: all 0.3s ease;
+}
+
+/* Custom Button Styles */
+.btn-primary {
+    @apply bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200;
+}
+
+.btn-outline {
+    @apply border border-green-600 text-green-600 hover:bg-green-50 font-medium py-2 px-4 rounded-lg transition-all duration-200;
+}
+
+/* Card Styles */
+.card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-200 hover:shadow-lg;
+}
+
+/* Form Elements */
+.input-field {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all;
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .map-sidebar {
+        @apply absolute inset-0 z-10 transform transition-transform duration-300;
+    }
+    
+    .map-sidebar.hidden {
+        @apply translate-x-full;
+    }
+}
+
+/* USF Brand Colors */
+.bg-usf-green {
+    background-color: #00573F;
+}
+
+.text-usf-gold {
+    color: #FDBB30;
+}

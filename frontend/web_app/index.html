@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00573F">
+    <meta name="description" content="Find and book study spaces at USF">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>USF SmartStudy Spaces</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Remove CDN and use local Tailwind build in production -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div id="app" class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="bg-green-700 text-white shadow-md">
+            <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <img src="./assets/logo.png" alt="USF Logo" class="h-10">
+                    <h1 class="text-xl font-bold">SmartStudy Spaces</h1>
+                </div>
+                <nav>
+                    <ul class="flex space-x-6">
+                        <li><a href="#" class="hover:text-green-200">Map</a></li>
+                        <li><a href="#" class="hover:text-green-200">Book</a></li>
+                        <li><a href="#" class="hover:text-green-200">My Spaces</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto px-4 py-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Map Container -->
+                <div class="lg:col-span-2 bg-white rounded-lg shadow-md p-4">
+                    <div id="map-container" class="h-96 w-full bg-gray-200 rounded">
+                        <!-- Map will be rendered here -->
+                        <p class="text-center mt-40">Loading campus map...</p>
+                    </div>
+                </div>
+
+                <!-- Booking Panel -->
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <h2 class="text-lg font-semibold mb-4">Find a Study Space</h2>
+                    <div id="booking-component"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-4">
+            <div class="container mx-auto px-4 text-center">
+                <p>&copy; 2023 University of South Florida. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- App Script -->
+    <script src="./app.js" type="module"></script>
+</body>
+</html>

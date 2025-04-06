@@ -1,0 +1,30 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ],
+      "route": "occupancy/{building}/{room}"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "out",
+      "name": "outputDocument",
+      "databaseName": "occupancyDB",
+      "collectionName": "occupancyData",
+      "createIfNotExists": true,
+      "connectionStringSetting": "CosmosDBConnection"
+    }
+  ],
+  "scriptFile": "../dist/occupancy_detection/index.js"
+}

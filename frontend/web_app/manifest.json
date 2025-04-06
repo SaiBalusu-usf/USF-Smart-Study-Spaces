@@ -1,0 +1,24 @@
+{
+  "name": "USF SmartStudy Spaces",
+  "short_name": "SmartStudy",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#00573F",
+  "theme_color": "#00573F",
+  "description": "Find and book study spaces at USF",
+  "icons": [
+    {
+      "src": "/assets/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "orientation": "portrait-primary"
+}
