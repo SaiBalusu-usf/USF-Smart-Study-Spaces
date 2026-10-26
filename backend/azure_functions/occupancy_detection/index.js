@@ -47,11 +47,11 @@ app.http('occupancyDetection', {
                 status: 200,
                 outputDocument: document
             };
-        } catch (error) {
-            context.log(`Error: ${error.message}`);
+        } catch {
+            context.log('Occupancy processing failed');
             return {
                 status: 500,
-                body: `Internal Server Error: ${error.message}`
+                body: 'Internal Server Error'
             };
         }
     }
